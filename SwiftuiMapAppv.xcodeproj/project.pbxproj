@@ -16,6 +16,7 @@
 		D8F842122C13858800D117EE /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F842112C13858800D117EE /* LocationView.swift */; };
 		D8F842142C13891600D117EE /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F842132C13891600D117EE /* LocationsViewModel.swift */; };
 		D8F842162C16190700D117EE /* LocationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F842152C16190700D117EE /* LocationsListView.swift */; };
+		D8F8421A2C16359A00D117EE /* LocationPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F842192C16359A00D117EE /* LocationPreviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		D8F842112C13858800D117EE /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		D8F842132C13891600D117EE /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
 		D8F842152C16190700D117EE /* LocationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListView.swift; sourceTree = "<group>"; };
+		D8F842192C16359A00D117EE /* LocationPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPreviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				D8F842112C13858800D117EE /* LocationView.swift */,
+				D8F842192C16359A00D117EE /* LocationPreviewView.swift */,
 				D8F842152C16190700D117EE /* LocationsListView.swift */,
 			);
 			path = Views;
@@ -186,6 +189,7 @@
 			files = (
 				D8F842102C1384B200D117EE /* LocationsDataService.swift in Sources */,
 				D8F842162C16190700D117EE /* LocationsListView.swift in Sources */,
+				D8F8421A2C16359A00D117EE /* LocationPreviewView.swift in Sources */,
 				D8F842142C13891600D117EE /* LocationsViewModel.swift in Sources */,
 				D8F841FC2C13821000D117EE /* ContentView.swift in Sources */,
 				D8F842122C13858800D117EE /* LocationView.swift in Sources */,

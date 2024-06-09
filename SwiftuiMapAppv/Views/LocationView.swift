@@ -19,15 +19,26 @@ struct LocationView: View {
             Map {
                 Marker(vm.mapLocation.name, coordinate: vm.mapRegion)
             }// end of map
-            .mapStyle(.hybrid(elevation: .realistic))
+            .mapStyle(.standard)
            
             VStack {
                 header
                     .padding()
                 
-                
-                
                 Spacer()
+                
+                ZStack {
+                    ForEach(vm.locations) { location in
+                        ZStack {
+                            if vm.mapLocation == location {
+                                LocationPreviewView(location: location)
+                                    .shadow(color: .black.opacity(0.3), radius: 20)
+                                    .padding()
+                                    .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
+                            }
+                        }
+                    }
+                }
             } // end of Vstack
             
         }
