@@ -9,16 +9,26 @@
 /* Begin PBXBuildFile section */
 		D8F841FA2C13821000D117EE /* SwiftuiMapAppvApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F841F92C13821000D117EE /* SwiftuiMapAppvApp.swift */; };
 		D8F841FC2C13821000D117EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F841FB2C13821000D117EE /* ContentView.swift */; };
-		D8F841FE2C13821100D117EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8F841FD2C13821100D117EE /* Assets.xcassets */; };
 		D8F842012C13821100D117EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8F842002C13821100D117EE /* Preview Assets.xcassets */; };
+		D8F842082C1382DC00D117EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8F842072C1382DC00D117EE /* Assets.xcassets */; };
+		D8F8420D2C1383A800D117EE /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F8420C2C1383A800D117EE /* Location.swift */; };
+		D8F842102C1384B200D117EE /* LocationsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F8420F2C1384B200D117EE /* LocationsDataService.swift */; };
+		D8F842122C13858800D117EE /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F842112C13858800D117EE /* LocationView.swift */; };
+		D8F842142C13891600D117EE /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F842132C13891600D117EE /* LocationsViewModel.swift */; };
+		D8F842162C16190700D117EE /* LocationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F842152C16190700D117EE /* LocationsListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D8F841F62C13821000D117EE /* SwiftuiMapAppv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftuiMapAppv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F841F92C13821000D117EE /* SwiftuiMapAppvApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftuiMapAppvApp.swift; sourceTree = "<group>"; };
 		D8F841FB2C13821000D117EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		D8F841FD2C13821100D117EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8F842002C13821100D117EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D8F842072C1382DC00D117EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D8F8420C2C1383A800D117EE /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		D8F8420F2C1384B200D117EE /* LocationsDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsDataService.swift; sourceTree = "<group>"; };
+		D8F842112C13858800D117EE /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		D8F842132C13891600D117EE /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
+		D8F842152C16190700D117EE /* LocationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +63,11 @@
 			children = (
 				D8F841F92C13821000D117EE /* SwiftuiMapAppvApp.swift */,
 				D8F841FB2C13821000D117EE /* ContentView.swift */,
-				D8F841FD2C13821100D117EE /* Assets.xcassets */,
+				D8F8420E2C13849800D117EE /* DataServices */,
+				D8F842092C13835A00D117EE /* Views */,
+				D8F8420A2C13836100D117EE /* ViewModels */,
+				D8F8420B2C13838B00D117EE /* Models */,
+				D8F842072C1382DC00D117EE /* Assets.xcassets */,
 				D8F841FF2C13821100D117EE /* Preview Content */,
 			);
 			path = SwiftuiMapAppv;
@@ -65,6 +79,39 @@
 				D8F842002C13821100D117EE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D8F842092C13835A00D117EE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D8F842112C13858800D117EE /* LocationView.swift */,
+				D8F842152C16190700D117EE /* LocationsListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D8F8420A2C13836100D117EE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D8F842132C13891600D117EE /* LocationsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D8F8420B2C13838B00D117EE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D8F8420C2C1383A800D117EE /* Location.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D8F8420E2C13849800D117EE /* DataServices */ = {
+			isa = PBXGroup;
+			children = (
+				D8F8420F2C1384B200D117EE /* LocationsDataService.swift */,
+			);
+			path = DataServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +172,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8F842082C1382DC00D117EE /* Assets.xcassets in Resources */,
 				D8F842012C13821100D117EE /* Preview Assets.xcassets in Resources */,
-				D8F841FE2C13821100D117EE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +184,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8F842102C1384B200D117EE /* LocationsDataService.swift in Sources */,
+				D8F842162C16190700D117EE /* LocationsListView.swift in Sources */,
+				D8F842142C13891600D117EE /* LocationsViewModel.swift in Sources */,
 				D8F841FC2C13821000D117EE /* ContentView.swift in Sources */,
+				D8F842122C13858800D117EE /* LocationView.swift in Sources */,
+				D8F8420D2C1383A800D117EE /* Location.swift in Sources */,
 				D8F841FA2C13821000D117EE /* SwiftuiMapAppvApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
