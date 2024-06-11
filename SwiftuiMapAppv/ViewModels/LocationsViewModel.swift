@@ -24,10 +24,16 @@ class LocationViewModel: ObservableObject {
     
     
     // current region on map
-    @Published var mapRegion: CLLocationCoordinate2D = CLLocationCoordinate2D()
+    @Published var span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
+    @Published var cameraPosition: MapCameraPosition = .region(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 41.8902, longitude: 12.4922), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)))
+
 
     // show list of locations
     @Published var showLocationList: Bool = false
+    
+    // show location detail via sheet
+    @Published var sheetLocation: Location? = nil
+    
     
     init() {
         let locations = LocationsDataService.locations
@@ -39,7 +45,8 @@ class LocationViewModel: ObservableObject {
     
     private func updateMapRegion(location: Location) {
         withAnimation(.easeIn) {
-            mapRegion = location.coordinates
+//            mapRegion = location.coordinates
+            cameraPosition = .region(MKCoordinateRegion(center: location.coordinates, span: span))
         }
     } // end of func
     
@@ -52,7 +59,7 @@ class LocationViewModel: ObservableObject {
     func showNextLocation(location: Location) {
         withAnimation(.easeInOut) {
             mapLocation = location
-            showLocationList = false 
+            showLocationList = false
         }
     }
     

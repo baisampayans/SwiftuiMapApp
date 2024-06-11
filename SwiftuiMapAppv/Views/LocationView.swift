@@ -11,15 +11,21 @@ import MapKit
 struct LocationView: View {
      
     @EnvironmentObject private var vm: LocationViewModel
-    
      
     var body: some View {
         ZStack {
-//            Map(coordinateRegion: $mapRegion)
-            Map {
-                Marker(vm.mapLocation.name, coordinate: vm.mapRegion)
-            }// end of map
-            .mapStyle(.standard)
+            
+            Map(position: $vm.cameraPosition) {
+                Annotation(vm.mapLocation.name, coordinate: vm.mapLocation.coordinates) {
+                                    LocationMapAnnotationView()
+                                }
+            }
+            .mapControls {
+                MapCompass()
+                MapPitchToggle()
+                MapUserLocationButton()
+            }
+            
            
             VStack {
                 header
@@ -34,13 +40,16 @@ struct LocationView: View {
                                 LocationPreviewView(location: location)
                                     .shadow(color: .black.opacity(0.3), radius: 20)
                                     .padding()
-                                    .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
+                                    .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading )))
                             }
                         }
                     }
                 }
             } // end of Vstack
             
+        } //end of Zstack
+        .sheet(item: $vm.sheetLocation, onDismiss: nil) { location in
+            LocationDetailView(location: location)
         }
     }// end of body
 }
